@@ -1,0 +1,111 @@
+@import "fonts";
+@import "vars";
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html, body{
+  font-family: 'PT Sans', sans-serif;
+  font-size: 20px;
+  overflow: hidden;
+}
+
+.container{
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.header{
+  height: 100%;
+  &__content{
+    display: flex;
+    min-height: 60px;
+    align-items: center;
+  }
+  &__logo{
+    flex: 1;
+  }
+  &__list-item{
+    margin-right: 20px;
+    &:last-of-type{
+      margin-right: 0;
+    }
+  }
+}
+
+.list{
+  list-style-type: none;
+  &-item{
+    display: inline;
+    cursor: pointer;
+    &:hover{
+      color: $color-text;
+    }
+  }
+}
+
+.logo{
+  color: $color-text;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.main{
+  background-color: white;
+  min-height: 100vh;
+}
+
+.functional{
+  &__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+  &__information{
+    font-size: 48px;
+    border-radius: 10px;
+    padding: 10px 15px;
+    background-color: $color-functional;
+    color: white;
+  }
+  &__button{
+    padding: 5px 15px;
+    margin-top: 30px;
+  }
+  &__color{
+    color: white;
+  }
+  &__logo{
+    margin-bottom: 20px;
+    &__gray{
+      color: $color-functional;
+    }
+    &__no-cursor{
+      cursor: default;
+    }
+  }
+}
+
+.button{
+  display: inline-block;
+  text-decoration: none;
+  border: 5px solid $color-functional;
+  border-radius: 20px;
+  color: $color-functional;
+  font-weight: 700;
+  outline: none;
+  &:hover{
+    background-color: $color-functional;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .container{
+    padding: 0 16px;
+  }
+}
